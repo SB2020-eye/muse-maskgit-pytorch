@@ -2,6 +2,9 @@ import torch
 import transformers
 from transformers import T5Tokenizer, T5EncoderModel, T5Config
 
+# SB: added line below to overcome "AttributeError: module 'transformers.utils' has no attribute 'logging'"
+import logging
+
 transformers.logging.set_verbosity_error()
 
 def exists(val):

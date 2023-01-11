@@ -24,6 +24,10 @@ from ema_pytorch import EMA
 
 from PIL import Image
 
+# SB: added 2 lines below to overcome "OSError: image file is truncated"
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 # helper functions
 
 def exists(val):
